@@ -1,0 +1,253 @@
+body,
+.bg-dark,
+.overflow .container-nav,
+.skills,
+.btn.btn-hero,
+.portfolio,
+.video,
+.price,
+.contacts .contacts-box .btn.btn-message,
+.footer {
+  background-color: #ffffff;
+}
+.active-lang {
+  color: #ffffff;
+}
+a:hover,
+.nav-ul-hidden > div > a:hover,
+.header .nav .nav-ul .li a:hover,
+.header .nav .nav-ul .btn.btn-language:hover,
+.btn.btn-hero:hover,
+.btn-season:hover,
+.btn-season.active-season,
+.price-box .item .btn.btn-price:hover,
+.contacts .contacts-box .btn.btn-message:hover,
+.portfolio .portfolio-box-seasons .btn-season.active-season {
+  color: #bdae82;
+}
+.nav-ul-hidden > div > a {
+  font-weight: 800;
+  color: #1c1c1c;
+}
+a,
+.header .nav .nav-ul .li a,
+.header .nav .nav-ul .li:last-child,
+.slash,
+.burger .line,
+.price .box-title .price-title,
+.video .box-title .video-title,
+.portfolio .box-title .portfolio-title,
+.skills .box-title .skills-title,
+.hero-title,
+.hero-about,
+.btn.btn-hero,
+.btn-season,
+.skills .skills-box-items .skills-box-item .item-main,
+.skills .skills-box-items .skills-box-item .item-second,
+.price-box .item .item-title,
+.price-box .item .item-price,
+.price-box .item .item-about,
+.price-box .item .btn.btn-price,
+.contacts .contacts-box .contacts-title,
+.footer .footer-box .item .item-box-one,
+.contacts .contacts-box .contacts-email input[type='email']::placeholder,
+.contacts .contacts-box .contacts-email input[type='tel']::placeholder,
+.contacts .contacts-box .contacts-phone input[type='email']::placeholder,
+.contacts .contacts-box .contacts-phone input[type='tel']::placeholder,
+.contacts .contacts-box .contacts-email input[type='email']:focus,
+.contacts .contacts-box .contacts-email input[type='tel']:focus,
+.contacts .contacts-box .contacts-phone input[type='email']:focus,
+.contacts .contacts-box .contacts-phone input[type='tel']:focus,
+.contacts .contacts-box .contacts-message textarea::placeholder,
+.contacts .contacts-box .contacts-message textarea:focus,
+.contacts .contacts-box .btn.btn-message {
+  color: #1c1c1c;
+}
+
+.header {
+  background-image: url('../img/jpg/theme/bg.jpg');
+}
+
+.header .nav .nav-ul .btn.btn-logo {
+  background-image: url('../img/svg/dark-theme/logo.svg');
+}
+.header .nav .nav-ul .btn.btn-logo:hover {
+  filter: invert(75%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+.hero {
+  background-image: url('../img/jpg/theme/bg.jpg');
+}
+/* .btn.btn-hero,
+.btn.btn-message {
+  box-shadow: 0px 5px 7px -4px;
+} */
+.btn.btn-hero:hover,
+.btn.btn-hero:focus,
+.btn.btn-message:hover,
+.btn.btn-message:focus {
+  box-shadow: inset -7em 0 0 0 #1c1c1c, inset 7em 0 0 0 #1c1c1c;
+}
+
+/* .btn.btn-hero:hover, */
+/* .contacts .contacts-box .btn.btn-message:hover {
+  box-shadow: none;
+} */
+.btn-season:hover,
+.btn-season:focus {
+  box-shadow: inset 13em 0 0 0 #1c1c1c;
+}
+.skills .box-title .skills-title-left,
+.skills .box-title .skills-title-right,
+.portfolio .box-title .portfolio-title-left,
+.portfolio .box-title .portfolio-title-right,
+.video .box-title .video-title-left,
+.video .box-title .video-title-right,
+.price .box-title .price-title-right,
+.price .box-title .price-title-left,
+/* .btn.btn-hero:hover, */
+.btn-season:hover,
+.btn-season.active-season,
+.price-box .item .btn.btn-price:hover,
+/* .contacts .contacts-box .btn.btn-message:hover,
+.contacts .contacts-box .btn.btn-message:hover, */
+.burger > .line,
+.portfolio .portfolio-box-seasons .btn-season.active-season:hover {
+  background-color: #1c1c1c;
+}
+
+.btn-season,
+.price-box .item .btn.btn-price,
+.burger:hover > .line {
+  background-color: #bdae82;
+}
+
+.btn-season.active-season,
+.portfolio .portfolio-box-seasons .btn-season.active-season:hover {
+  border: 2px solid #bdae82;
+}
+
+.video .video-box .btn.btn-video {
+  background-image: url('../img/svg/dark-theme/Play.svg');
+}
+.video .video-box .btn.btn-video:hover {
+  filter: invert(75%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.contacts {
+  background-image: url('../img/jpg/theme/contacts.jpg');
+}
+
+.contacts .contacts-box .contacts-email input[type='email'],
+.contacts .contacts-box .contacts-email input[type='tel'],
+.contacts .contacts-box .contacts-phone input[type='email'],
+.contacts .contacts-box .contacts-phone input[type='tel'],
+.contacts .contacts-box .contacts-message textarea {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.svg-theme.dark:hover,
+.svg-instagram:hover,
+.svg-facebook:hover,
+.svg-twitter:hover,
+.svg-pinterest:hover {
+  filter: invert(75%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+.svg-theme.dark {
+  background-image: url('../img/svg/dark-theme/theme-dark.svg');
+}
+.svg-instagram {
+  background-image: url('../img/svg/dark-theme/inst.svg');
+}
+
+.svg-facebook {
+  background-image: url('../img/svg/dark-theme/fb.svg');
+}
+
+.svg-twitter {
+  background-image: url('../img/svg/dark-theme/tw.svg');
+}
+
+.svg-pinterest {
+  background-image: url('../img/svg/dark-theme/pinterest.svg');
+}
+
+@media (max-width: 768px) {
+  .video .video-box {
+    background-image: url('../img/jpg/video-player2.jpg');
+  }
+  .hero .theme {
+    top: 125px;
+    right: 60px;
+  }
+}
+@media (max-width: 739px) {
+  .hero .theme {
+    top: 105px;
+    right: 60px;
+  }
+}
+@media (max-width: 717px) {
+  .hero .theme {
+    top: 25px;
+    right: 40px;
+  }
+}
+@media (max-width: 617px) {
+  .hero .theme {
+    top: -5px;
+    right: 40px;
+  }
+}
+@media (max-width: 585px) {
+  .hero .theme {
+    top: -35px;
+    right: 40px;
+  }
+}
+@media (max-width: 555px) {
+  .hero .theme {
+    top: -75px;
+    right: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .hero .theme {
+    top: -115px;
+    right: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .hero .theme {
+    top: -115px;
+    right: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .hero .theme {
+    top: -155px;
+    right: 20px;
+  }
+  .theme .svg-theme {
+    width: 27px;
+    height: 27px;
+  }
+}
+@media (max-width: 390px) {
+  .hero .theme {
+    top: -175px;
+    right: 20px;
+  }
+}
+@media (max-width: 370px) {
+  .hero .theme {
+    top: -207px;
+    right: 20px;
+  }
+  .theme .svg-theme {
+    width: 25px;
+    height: 25px;
+  }
+}
