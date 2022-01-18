@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eco sounds</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+          <ul class="ul">
+            <li class="li">
+              <button class="logo" data-bird="woody"></button>
+            </li>
+            <li class="li">
+              <a href="#" class="birds" data-bird="drozd">Drozd</a>
+            </li>
+            <li class="li">
+              <a href="#" class="birds" data-bird="javoronok">Javoronok</a>
+            </li>
+            <li class="li">
+              <a href="#" class="birds" data-bird="slavka">Slavka</a>
+            </li>
+            <li class="li">
+              <a href="#" class="birds" data-bird="solovey">Solovey</a>
+            </li>
+            <li class="li">
+              <a href="#" class="birds" data-bird="zarynka">Zarynka</a>
+            </li>
+            <li id="hidden-menu">
+              <a href="#brds"
+                >Choose Bird:<span class="choose">&rsaquo;</span></a
+              >
+              <ul id="brds">
+                <li class="li-hidden">
+                  <a href="#" class="birds" data-bird="drozd">Drozd</a>
+                </li>
+                <li class="li-hidden">
+                  <a href="#" class="birds" data-bird="javoronok">Javoronok</a>
+                </li>
+                <li class="li-hidden">
+                  <a href="#" class="birds" data-bird="slavka">Slavka</a>
+                </li>
+                <li class="li-hidden">
+                  <a href="#" class="birds" data-bird="solovey">Solovey</a>
+                </li>
+                <li class="li-hidden">
+                  <a href="#" class="birds" data-bird="zarynka">Zarynka</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <!-- <button class="big-play"></button> -->
+      </main>
+      <footer class="footer">
+        <ul class="ul-footer">
+          <li class="li-footer">
+            &copy;&nbsp;2022&nbsp;<a href="https://github.com/webdevDmYa"
+              >Github</a
+            >
+          </li>
+          <li class="li-footer">
+            <a href="https://rs.school/js-stage0/"
+              ><div class="rsschool"></div
+            ></a>
+          </li>
+          <li class="li-footer">
+            <div class="box-audio">
+              <button class="big-play"></button>
+              <a id="downloaMp3" href="./assets/audio/drozd.mp3" download="">
+                <button class="download"></button>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
