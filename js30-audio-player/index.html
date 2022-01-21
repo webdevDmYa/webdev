@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap"
+      rel="stylesheet"
+    />
+    <title>audio player</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <img
+      src="./assets/img/serega.png"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <img
+      src="./assets/svg/backward.png"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <img
+      src="./assets/svg/forward.png"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <img
+      src="./assets/svg/play.png"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <img
+      src="./assets/svg/pause.png"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <img
+      src="./assets/svg/rss.svg"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <div class="wrapper">
+      <div class="loader"></div>
+      <div class="container">
+        <div class="view">
+          <span class="track"><b></b></span>
+          <img src="" class="view-img" />
+        </div>
+        <div class="controls-audio-box">
+          <div class="box-controls">
+            <div class="control-play-box">
+              <button class="play"></button>
+            </div>
+            <div class="control-title-box">
+              <div class="track-author"></div>
+              <div class="marguee">
+                <p class="track-name"></p>
+              </div>
+            </div>
+            <div class="control-step-box">
+              <div class="step-up">
+                <button class="forward"></button>
+              </div>
+              <div class="step-down">
+                <button class="backward"></button>
+              </div>
+            </div>
+          </div>
+          <div class="box-range">
+            <output class="start-time">0:00</output>
+            <div class="input-box">
+              <input type="range" class="range-progress" max="100" value="0" />
+            </div>
+            <output class="end-time">0:00</output>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer" style="display: none">
+      <div class="footer-box item">
+        <div class="item-box-one" style="display: flex; gap: 20px">
+          <div>&copy;</div>
+          <div>2022</div>
+          <div>
+            <a href="https://github.com/webdevDmYa" title="webdevDmYa"
+              >github</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="footer-box item">
+        <a href="https://rs.school/js-stage0/" title="js-stage0">
+          <div class="rsschool"></div
+        ></a>
+      </div>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
