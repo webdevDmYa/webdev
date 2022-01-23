@@ -3,6 +3,8 @@ let startNum = 0;
 let interval;
 let currentTime = 0;
 const play = document.querySelector('.play');
+const volume = document.querySelector('.volume');
+const volumeRange = document.getElementById('volume');
 const pause = document.querySelector('.pause');
 const forward = document.querySelector('.forward');
 const backward = document.querySelector('.backward');
@@ -22,33 +24,43 @@ const progress = document.querySelector('.range-progress');
 
 const trackList = [
   [
-    './assets/audio/beyonce.mp3',
-    'Run the World!',
-    'Beyonce',
-    './assets/img/beyonce.webp',
-  ],
-  [
     './assets/audio/Serega.mp3',
-    'Черный бумер!',
+    'Черный бумер',
     'Серёга',
     './assets/img/serega.webp',
   ],
   [
-    './assets/audio/Scooter.mp3',
-    'How much is the Fish? (Divius Remix)',
-    'Scooter',
-    './assets/img/scooter.webp',
+    './assets/audio/anamvserano.mp3',
+    'А нам все равно',
+    'Ю.Никулин',
+    './assets/img/Никулин.webp',
+  ],
+  [
+    './assets/audio/Breathe.mp3',
+    'Breathe',
+    'The Prodigy',
+    './assets/img/prodigy.webp',
+  ],
+  [
+    './assets/audio/Voodoo-People.mp3',
+    'Voodoo People',
+    'The Prodigy',
+    './assets/img/prodigy.webp',
+  ],
+  [
+    './assets/audio/Du-Hast.mp3',
+    'Du Hast',
+    'Rammstein',
+    './assets/img/rammstein.webp',
+  ],
+  [
+    './assets/audio/Ich-Will.mp3',
+    'Ich Will',
+    'Rammstein',
+    './assets/img/rammstein.webp',
   ],
 ];
-const yNikulin = [
-  './assets/audio/anamvserano.mp3',
-  'А Нам Все Равно!',
-  'Юлий Никулин',
-  './assets/img/Никулин.webp',
-];
 
-trackList.push(yNikulin);
-console.log(trackList);
 const mp3 = new Audio(trackList[0][0]);
 
 window.addEventListener('load', function () {
@@ -59,7 +71,89 @@ window.addEventListener('load', function () {
   footer.style.display = 'flex';
 });
 
+window.addEventListener('DOMContentLoaded', function () {
+  getTrackInfo(trackList, startNum);
+});
+
+mp3.addEventListener('loadeddata', function () {
+  endTime.textContent = calculateTime(mp3.duration);
+  startTime.textContent = calculateTime(mp3.currentTime);
+  progress.max = Math.floor(mp3.duration);
+});
+
+mp3.addEventListener('timeupdate', () => {
+  getColorBgTrack();
+  startTime.textContent = calculateTime(progress.value);
+  progress.value = Math.floor(mp3.currentTime);
+  currentTime = Math.floor(mp3.currentTime);
+});
+
+mp3.addEventListener('ended', function () {
+  startNum++;
+  if (startNum / trackList.length === 1) {
+    startNum = 0;
+    startAudioPlayer();
+  } else {
+    startAudioPlayer();
+  }
+  progress.style.background = '';
+});
+
 play.addEventListener('click', playButton);
+forward.addEventListener('click', playNext);
+backward.addEventListener('click', playPrev);
+
+volume.addEventListener('click', function () {
+  if (this.classList.contains('volume')) {
+    getVolumeValueStyleZero();
+  } else {
+    getVolumeValueStyleOne();
+  }
+});
+
+volumeRange.addEventListener('change', function () {
+  mp3.volume = this.value;
+  if (mp3.volume === 0) {
+    getVolumeValueStyleZero();
+  } else {
+    getVolumeValueStyleOne();
+  }
+});
+
+volumeRange.addEventListener('input', function () {
+  getColorBg();
+});
+
+getColorBg();
+getColorBgTrack();
+
+progress.addEventListener('input', function () {
+  mp3.currentTime = this.value;
+  getColorBgTrack();
+});
+
+function getVolumeValueStyleZero() {
+  mp3.volume = 0;
+  volume.classList.add('mute');
+  volume.classList.remove('volume');
+}
+function getVolumeValueStyleOne() {
+  volume.classList.remove('mute');
+  volume.classList.add('volume');
+  mp3.volume = volumeRange.value;
+}
+function getColorBg() {
+  let percent = +volumeRange.value * 100;
+  mp3.volume = volumeRange.value;
+  volumeRange.style.background = `linear-gradient(to right, rgb(189, 174, 130) 0%, rgb(189, 174, 130) ${percent}%, #fff ${percent}%, white 100%)`;
+}
+function getColorBgTrack() {
+  let percent =
+    Math.floor((Math.floor(mp3.currentTime) * 100) / Math.floor(mp3.duration)) +
+    1;
+  progress.style.background = `linear-gradient(to right, rgb(189, 174, 130) 0%, rgb(189, 174, 130) ${percent}%, #fff ${percent}%, white 100%)`;
+}
+
 function playButton() {
   if (!isPlay) {
     startAudioPlayer();
@@ -78,7 +172,6 @@ function playButton() {
   }
 }
 
-forward.addEventListener('click', playNext);
 function playNext() {
   startNum++;
   if (startNum / trackList.length === 1) {
@@ -88,7 +181,7 @@ function playNext() {
     getPrevNextAudio();
   }
 }
-backward.addEventListener('click', playPrev);
+
 function playPrev() {
   startNum--;
   if (startNum === -1) {
@@ -140,6 +233,7 @@ function stopAudio() {
   mp3.pause();
   isPlay = false;
 }
+
 function move() {
   let currentTX = getComputedStyle(marquee).transform.split(',');
   if (currentTX[4] === undefined) {
@@ -154,55 +248,9 @@ function move() {
   }
 }
 
-// function preloadImg(arr) {
-//   const img = new Image();
-//   for (let i = 0; i < arr.length; i++) {
-//     img.src = arr[i][3];
-//   }
-// }
-window.addEventListener('DOMContentLoaded', function () {
-  getTrackInfo(trackList, startNum);
-  // preloadImg(trackList);
-});
-
 const calculateTime = (secs) => {
   const minutes = Math.floor(secs / 60);
   const seconds = Math.floor(secs % 60);
   const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
   return `${minutes}:${returnedSeconds}`;
 };
-
-mp3.addEventListener('loadeddata', function () {
-  endTime.textContent = calculateTime(mp3.duration);
-  startTime.textContent = calculateTime(mp3.currentTime);
-  progress.max = Math.floor(mp3.duration);
-});
-
-progress.addEventListener('input', function () {
-  let percent =
-    Math.floor((Math.floor(mp3.currentTime) * 100) / Math.floor(mp3.duration)) +
-    1;
-  mp3.currentTime = this.value;
-  this.style.background = `linear-gradient(to right, rgba(78, 138, 147, 0.9668242296918768) 0%, rgba(78, 138, 147, 0.9668242296918768) ${percent}%, #fff ${percent}%, white 100%)`;
-});
-
-mp3.addEventListener('timeupdate', () => {
-  let percent =
-    Math.floor((Math.floor(mp3.currentTime) * 100) / Math.floor(mp3.duration)) +
-    1;
-  progress.style.background = `linear-gradient(to right, rgba(78, 138, 147, 0.9668242296918768) 0%, rgba(78, 138, 147, 0.9668242296918768) ${percent}%, #fff ${percent}%, white 100%)`;
-  startTime.textContent = calculateTime(progress.value);
-  progress.value = Math.floor(mp3.currentTime);
-  currentTime = Math.floor(mp3.currentTime);
-});
-
-mp3.addEventListener('ended', function () {
-  startNum++;
-  if (startNum / trackList.length === 1) {
-    startNum = 0;
-    startAudioPlayer();
-  } else {
-    startAudioPlayer();
-  }
-  progress.style.background = '';
-});

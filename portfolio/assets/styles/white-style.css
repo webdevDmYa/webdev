@@ -7,7 +7,8 @@ body,
 .video,
 .price,
 .contacts .contacts-box .btn.btn-message,
-.footer {
+.footer,
+figcaption {
   background-color: #ffffff;
 }
 .active-lang {
@@ -121,15 +122,22 @@ a,
 .burger:hover > .line {
   background-color: #bdae82;
 }
-
+#progress::-webkit-slider-thumb,
+#mute-range::-webkit-slider-thumb {
+  background: #c2c9d6;
+}
 .btn-season.active-season,
+#progress,
+#mute-range,
+#progress::-webkit-slider-thumb,
+#mute-range::-webkit-slider-thumb,
 .portfolio .portfolio-box-seasons .btn-season.active-season:hover {
   border: 2px solid #bdae82;
 }
 
-.video .video-box .btn.btn-video {
+/* .video .video-box .btn.btn-video {
   background-image: url('../img/svg/dark-theme/Play.svg');
-}
+} */
 .video .video-box .btn.btn-video:hover {
   filter: invert(75%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
@@ -173,11 +181,14 @@ a,
 .svg-pinterest {
   background-image: url('../img/svg/dark-theme/pinterest.svg');
 }
-
+.svg-volume,
+.svg-play {
+  filter: invert(1);
+}
 @media (max-width: 768px) {
-  .video .video-box {
+  /* .video .video-box {
     background-image: url('../img/jpg/video-player2.jpg');
-  }
+  } */
   .hero .theme {
     top: 125px;
     right: 60px;

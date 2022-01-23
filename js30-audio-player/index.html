@@ -16,12 +16,6 @@
   </head>
   <body>
     <img
-      src="./assets/img/serega.png"
-      class="background"
-      style="display: none"
-      alt=""
-    />
-    <img
       src="./assets/svg/backward.png"
       class="background"
       style="display: none"
@@ -59,9 +53,15 @@
           <img src="" class="view-img" />
         </div>
         <div class="controls-audio-box">
+            <input type="range" id="volume" value="1" min="0" max="1" step="0.1"></input>
           <div class="box-controls">
             <div class="control-play-box">
-              <button class="play"></button>
+              <div class="play-box-button">
+                <button class="play"></button>
+              </div>
+              <div class="play-box-button">
+                <button class="volume"></button>
+              </div>
             </div>
             <div class="control-title-box">
               <div class="track-author"></div>

@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/styles/normalize.css" />
+    <link rel="stylesheet" href="./assets/styles/video.css" />
     <link rel="stylesheet" href="./assets/styles/style.css" id="theme" />
     <title>Porfolio</title>
   </head>
@@ -161,6 +162,34 @@
           </div>
           <div class="video-box">
             <div class="img-video">
+              <figure>
+                <video src="./assets/video/video.mp4"></video>
+                <figcaption>
+                  <div class="col">
+                    <button
+                      id="play"
+                      class="btn btn-video-play svg-play"
+                    ></button>
+                    <div class="input-box">
+                      <input type="range" id="progress" value="0" step="0.1" />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <button
+                      id="mute"
+                      class="btn btn-video-mute svg-volume"
+                    ></button>
+                    <input
+                      type="range"
+                      id="mute-range"
+                      max="1"
+                      min="0"
+                      value="1"
+                      step="0.1"
+                    />
+                  </div>
+                </figcaption>
+              </figure>
               <button class="btn btn-video"></button>
             </div>
           </div>
@@ -270,5 +299,6 @@
     <script type="module" src="./main.js"></script>
     <script type="module" src="./assets/ruEng/translate.js"></script>
     <script type="module" src="./assets/common/func.js"></script>
+    <script type="module" src="./assets/common/video.js"></script>
   </body>
 </html>
