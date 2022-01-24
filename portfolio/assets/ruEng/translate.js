@@ -78,172 +78,24 @@ export const i18Obj = {
 };
 
 export function translateTo(param) {
-  let hr = document.querySelector('.hero-title');
-  let ht = document.querySelector('.hero-about');
-  let hb = document.querySelector('.btn.btn-hero');
+  let words = document.querySelectorAll('[data-translate]');
+  words.forEach((el) => {
+    el.innerHTML = el.innerHTML.replace(
+      el.innerHTML,
+      param[el.dataset.translate]
+    );
+  });
   let st = document.querySelector('.skills-title');
-  let pt = document.querySelector('.portfolio-title');
-  let vt = document.querySelector('.video-title');
-  let prt = document.querySelector('.price-title');
-  let ct = document.querySelector('.contacts-title');
-  let btnm = document.querySelector('.btn.btn-message');
   let email = document.querySelector('input[type="email"]');
   let tel = document.querySelector('input[type="tel"]');
   let textArea = document.querySelector('textarea');
-  let btnPrice = document.querySelectorAll('.btn.btn-price');
-  let titlePrice = document.querySelectorAll('.price-box .item-title');
-  let aboutPrice = document.querySelectorAll('.price-box .item-about');
-  let btnSeason = document.querySelectorAll('.btn.btn-season');
-  let skillsTitle = document.querySelectorAll('.item-main');
-  let skillsAbout = document.querySelectorAll('.item-second');
-  let nav_li_s = document.querySelectorAll('header > nav > ul > li > a');
-  let nav_li_hidden = document.querySelectorAll('.li-hidden');
-
-  hr.innerHTML = hr.innerHTML.replace(hr.innerHTML, param['hero-title']);
-  ht.innerHTML = ht.innerHTML.replace(ht.innerHTML, param['hero-text']);
-  hb.innerHTML = hb.innerHTML.replace(hb.innerHTML, param.hire);
-  st.innerHTML = st.innerHTML.replace(st.innerHTML, param.skills);
-  pt.innerHTML = pt.innerHTML.replace(pt.innerHTML, param.portfolio);
-  vt.innerHTML = vt.innerHTML.replace(vt.innerHTML, param.video);
-  prt.innerHTML = prt.innerHTML.replace(prt.innerHTML, param.price);
-  ct.innerHTML = ct.innerHTML.replace(ct.innerHTML, param['contact-me']);
-
-  btnm.innerHTML = btnm.innerHTML.replace(
-    btnm.innerHTML,
-    param['send-message']
-  );
-  btnPrice.forEach((btn) => {
-    btn.innerHTML = btn.innerHTML.replace(btn.innerHTML, param.order);
-  });
-
-  titlePrice[0].innerHTML = titlePrice[0].innerHTML.replace(
-    titlePrice[0].innerHTML,
-    param['price-standart']
-  );
-  titlePrice[1].innerHTML = titlePrice[1].innerHTML.replace(
-    titlePrice[1].innerHTML,
-    param['price-premium']
-  );
-  titlePrice[2].innerHTML = titlePrice[2].innerHTML.replace(
-    titlePrice[2].innerHTML,
-    param['price-gold']
-  );
-
-  aboutPrice[0].innerHTML = aboutPrice[0].innerHTML.replace(
-    aboutPrice[0].innerHTML,
-    param['price-descripton-1-span-1']
-  );
-  aboutPrice[1].innerHTML = aboutPrice[1].innerHTML.replace(
-    aboutPrice[1].innerHTML,
-    param['price-descripton-2-span-2']
-  );
-  aboutPrice[2].innerHTML = aboutPrice[2].innerHTML.replace(
-    aboutPrice[2].innerHTML,
-    param['price-descripton-3-span-3']
-  );
-
-  btnSeason[0].innerHTML = btnSeason[0].innerHTML.replace(
-    btnSeason[0].innerHTML,
-    param.winter
-  );
-  btnSeason[1].innerHTML = btnSeason[1].innerHTML.replace(
-    btnSeason[1].innerHTML,
-    param.spring
-  );
-  btnSeason[2].innerHTML = btnSeason[2].innerHTML.replace(
-    btnSeason[2].innerHTML,
-    param.summer
-  );
-  btnSeason[3].innerHTML = btnSeason[3].innerHTML.replace(
-    btnSeason[3].innerHTML,
-    param.autumn
-  );
-
-  skillsTitle[0].innerHTML = skillsTitle[0].innerHTML.replace(
-    skillsTitle[0].innerHTML,
-    param['skill-title-1']
-  );
-  skillsTitle[1].innerHTML = skillsTitle[1].innerHTML.replace(
-    skillsTitle[1].innerHTML,
-    param['skill-title-2']
-  );
-  skillsTitle[2].innerHTML = skillsTitle[2].innerHTML.replace(
-    skillsTitle[2].innerHTML,
-    param['skill-title-3']
-  );
-  skillsTitle[3].innerHTML = skillsTitle[3].innerHTML.replace(
-    skillsTitle[3].innerHTML,
-    param['skill-title-4']
-  );
-
-  skillsAbout[0].innerHTML = skillsAbout[0].innerHTML.replace(
-    skillsAbout[0].innerHTML,
-    param['skill-text-1']
-  );
-  skillsAbout[1].innerHTML = skillsAbout[1].innerHTML.replace(
-    skillsAbout[1].innerHTML,
-    param['skill-text-2']
-  );
-  skillsAbout[2].innerHTML = skillsAbout[2].innerHTML.replace(
-    skillsAbout[2].innerHTML,
-    param['skill-text-3']
-  );
-  skillsAbout[3].innerHTML = skillsAbout[3].innerHTML.replace(
-    skillsAbout[3].innerHTML,
-    param['skill-text-4']
-  );
-
-  nav_li_s[0].innerHTML = nav_li_s[0].innerHTML.replace(
-    nav_li_s[0].innerHTML,
-    param.skills
-  );
-  nav_li_s[1].innerHTML = nav_li_s[1].innerHTML.replace(
-    nav_li_s[1].innerHTML,
-    param.portfolio
-  );
-  nav_li_s[2].innerHTML = nav_li_s[2].innerHTML.replace(
-    nav_li_s[2].innerHTML,
-    param.video
-  );
-  nav_li_s[3].innerHTML = nav_li_s[3].innerHTML.replace(
-    nav_li_s[3].innerHTML,
-    param.price
-  );
-  nav_li_s[4].innerHTML = nav_li_s[4].innerHTML.replace(
-    nav_li_s[4].innerHTML,
-    param.contacts
-  );
-
-  nav_li_hidden[0].innerHTML = nav_li_hidden[0].innerHTML.replace(
-    nav_li_hidden[0].innerHTML,
-    param.skills
-  );
-  nav_li_hidden[1].innerHTML = nav_li_hidden[1].innerHTML.replace(
-    nav_li_hidden[1].innerHTML,
-    param.portfolio
-  );
-  nav_li_hidden[2].innerHTML = nav_li_hidden[2].innerHTML.replace(
-    nav_li_hidden[2].innerHTML,
-    param.video
-  );
-  nav_li_hidden[3].innerHTML = nav_li_hidden[3].innerHTML.replace(
-    nav_li_hidden[3].innerHTML,
-    param.price
-  );
-  nav_li_hidden[4].innerHTML = nav_li_hidden[4].innerHTML.replace(
-    nav_li_hidden[4].innerHTML,
-    param.contacts
-  );
-
   if (param === i18Obj.ru) {
     st.style.marginRight = '9.5%';
-
     email.setAttribute('placeholder', 'Е-мейл');
     tel.setAttribute('placeholder', 'Тел');
     textArea.setAttribute('placeholder', 'Сообщение');
   } else {
     st.style.marginRight = '2.5%';
-
     email.setAttribute('placeholder', 'E-mail');
     tel.setAttribute('placeholder', 'Phone');
     textArea.setAttribute('placeholder', 'Message');

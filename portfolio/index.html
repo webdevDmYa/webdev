@@ -21,14 +21,79 @@
     <title>Porfolio</title>
   </head>
   <body>
+    <img src="./assets/img/svg/Play_hover.svg" style="display: none" alt="" />
+    <img
+      src="./assets/img/svg/logo.svg"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <img
+      src="./assets/img/svg/dark-theme/logo.svg"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <img
+      src="./assets/img/svg/dark-theme/theme-dark.svg"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <img
+      src="./assets/img/svg/dark-theme/theme.svg"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <img
+      src="./assets/img/svg/play.svg"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <img
+      src="./assets/img/svg/pause.svg"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <img
+      src="./assets/img/svg/volume.svg"
+      class="background"
+      style="display: none"
+      alt=""
+    />
+    <img
+      src="./assets/img/svg/mute.svg"
+      class="background"
+      style="display: none"
+      alt=""
+    />
     <div class="overflow">
       <div class="container-nav">
         <div class="nav-ul-hidden">
-          <div><a class="li-hidden" href="#skills">Skills</a></div>
-          <div><a class="li-hidden" href="#portfolio">Portfolio</a></div>
-          <div><a class="li-hidden" href="#video">Video</a></div>
-          <div><a class="li-hidden" href="#price">Price</a></div>
-          <div><a class="li-hidden" href="#contacts">Contacts</a></div>
+          <div>
+            <a class="li-hidden" href="#skills" data-translate="skills"
+              >Skills</a
+            >
+          </div>
+          <div>
+            <a class="li-hidden" href="#portfolio" data-translate="portfolio"
+              >Portfolio</a
+            >
+          </div>
+          <div>
+            <a class="li-hidden" href="#video" data-translate="video">Video</a>
+          </div>
+          <div>
+            <a class="li-hidden" href="#price" data-translate="price">Price</a>
+          </div>
+          <div>
+            <a class="li-hidden" href="#contacts" data-translate="contacts"
+              >Contacts</a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -39,11 +104,21 @@
             <li class="nav-ul li">
               <button class="btn btn-logo"></button>
             </li>
-            <li class="nav-ul li"><a href="#skills">Skills</a></li>
-            <li class="nav-ul li"><a href="#portfolio">Portfolio</a></li>
-            <li class="nav-ul li"><a href="#video">Video</a></li>
-            <li class="nav-ul li"><a href="#price">Price</a></li>
-            <li class="nav-ul li"><a href="#contacts">Contacts</a></li>
+            <li class="nav-ul li">
+              <a href="#skills" data-translate="skills">Skills</a>
+            </li>
+            <li class="nav-ul li">
+              <a href="#portfolio" data-translate="portfolio">Portfolio</a>
+            </li>
+            <li class="nav-ul li">
+              <a href="#video" data-translate="video">Video</a>
+            </li>
+            <li class="nav-ul li">
+              <a href="#price" data-translate="price">Price</a>
+            </li>
+            <li class="nav-ul li">
+              <a href="#contacts" data-translate="contacts">Contacts</a>
+            </li>
             <li class="nav-ul li">
               <button class="btn btn-language" data-language="en">en</button
               ><span class="slash">/</span
@@ -63,12 +138,12 @@
       <div class="bg-dark">
         <section class="hero">
           <div class="hero-box">
-            <h1 class="hero-title">Alexa Rise</h1>
-            <p class="hero-about">
+            <h1 class="hero-title" data-translate="hero-title">Alexa Rise</h1>
+            <p class="hero-about" data-translate="hero-text">
               Save sincere emotions, romantic feelings and happy moments of life
               together with professional photographer Alexa Rise
             </p>
-            <button class="btn btn-hero">Hire me</button>
+            <button class="btn btn-hero" data-translate="hire">Hire me</button>
           </div>
           <div class="theme">
             <div class="svg-theme"></div>
@@ -79,7 +154,7 @@
         <section id="skills" class="skills">
           <div class="box-title">
             <div class="skills-title-left"></div>
-            <h2 class="skills-title">Skills</h2>
+            <h2 class="skills-title" data-translate="skills">Skills</h2>
             <div class="skills-title-right"></div>
           </div>
           <div class="skills-box-items">
@@ -89,8 +164,10 @@
                 class="item-image svg-photography"
                 alt="camera"
               />
-              <div class="item-main">Digital photography</div>
-              <div class="item-second">
+              <div class="item-main" data-translate="skill-title-1">
+                Digital photography
+              </div>
+              <div class="item-second" data-translate="skill-text-1">
                 High-quality photos in the studio and on the nature
               </div>
             </div>
@@ -100,8 +177,10 @@
                 alt="video"
                 class="item-image svg-video"
               />
-              <div class="item-main">Video shooting</div>
-              <div class="item-second">
+              <div class="item-main" data-translate="skill-title-2">
+                Video shooting
+              </div>
+              <div class="item-second" data-translate="skill-text-2">
                 Capture your moments so that they always stay with you
               </div>
             </div>
@@ -111,8 +190,10 @@
                 alt="retouch"
                 class="item-image svg-image"
               />
-              <div class="item-main">Retouch</div>
-              <div class="item-second">
+              <div class="item-main" data-translate="skill-title-3">
+                Retouch
+              </div>
+              <div class="item-second" data-translate="skill-text-3">
                 I strive to make photography surpass reality
               </div>
             </div>
@@ -122,8 +203,8 @@
                 alt="record"
                 class="item-image svg-mic"
               />
-              <div class="item-main">Audio</div>
-              <div class="item-second">
+              <div class="item-main" data-translate="skill-title-4">Audio</div>
+              <div class="item-second" data-translate="skill-text-4">
                 Professional sounds recording for video, advertising, portfolio
               </div>
             </div>
@@ -134,14 +215,40 @@
         <section id="portfolio" class="portfolio">
           <div class="box-title">
             <div class="portfolio-title-left"></div>
-            <h2 class="portfolio-title">Portfolio</h2>
+            <h2 class="portfolio-title" data-translate="portfolio">
+              Portfolio
+            </h2>
             <div class="portfolio-title-right"></div>
           </div>
           <div class="portfolio-box-seasons">
-            <button class="btn btn-season" data-season="winter">Winter</button>
-            <button class="btn btn-season" data-season="spring">Spring</button>
-            <button class="btn btn-season" data-season="summer">Summer</button>
-            <button class="btn btn-season" data-season="autumn">Autumn</button>
+            <button
+              class="btn btn-season"
+              data-season="winter"
+              data-translate="winter"
+            >
+              Winter
+            </button>
+            <button
+              class="btn btn-season"
+              data-season="spring"
+              data-translate="spring"
+            >
+              Spring
+            </button>
+            <button
+              class="btn btn-season"
+              data-season="summer"
+              data-translate="summer"
+            >
+              Summer
+            </button>
+            <button
+              class="btn btn-season"
+              data-season="autumn"
+              data-translate="autumn"
+            >
+              Autumn
+            </button>
           </div>
           <div class="portfolio-box-photos">
             <div class="portfolio-box-photos photo1"></div>
@@ -157,7 +264,7 @@
         <section id="video" class="video">
           <div class="box-title">
             <div class="video-title-left"></div>
-            <h2 class="video-title">Video</h2>
+            <h2 class="video-title" data-translate="video">Video</h2>
             <div class="video-title-right"></div>
           </div>
           <div class="video-box">
@@ -199,39 +306,45 @@
         <section id="price" class="price">
           <div class="box-title">
             <div class="price-title-left"></div>
-            <h2 class="price-title">Price</h2>
+            <h2 class="price-title" data-translate="price">Price</h2>
             <div class="price-title-right"></div>
           </div>
           <div class="price-box">
             <div class="price-box item">
-              <p class="item-title">Standard</p>
+              <p class="item-title" data-translate="price-standart">Standard</p>
               <p class="item-price">500 $</p>
-              <p class="item-about">
+              <p class="item-about" data-translate="price-descripton-1-span-1">
                 One location<br />
                 120 photos in color<br />12 photos in retouch<br />Readiness 2-3
                 weeks<br />Make up, visage
               </p>
-              <button class="btn btn-price">Order shooting</button>
+              <button class="btn btn-price" data-translate="order">
+                Order shooting
+              </button>
             </div>
             <div class="price-box item">
-              <p class="item-title">Premium</p>
+              <p class="item-title" data-translate="price-premium">Premium</p>
               <p class="item-price">700 $</p>
-              <p class="item-about">
+              <p class="item-about" data-translate="price-descripton-2-span-2">
                 One or two locations<br />
                 200 photos in color<br />20 photos in retouch<br />Readiness 1-2
                 weeks<br />Make up, visage
               </p>
-              <button class="btn btn-price">Order shooting</button>
+              <button class="btn btn-price" data-translate="order">
+                Order shooting
+              </button>
             </div>
             <div class="price-box item">
-              <p class="item-title">Gold</p>
+              <p class="item-title" data-translate="price-gold">Gold</p>
               <p class="item-price">1000 $</p>
-              <p class="item-about">
+              <p class="item-about" data-translate="price-descripton-3-span-3">
                 Three locations or more<br />
                 300 photos in color<br />50 photos in retouch<br />Readiness 1
                 week<br />Make up, visage, hairstyle
               </p>
-              <button class="btn btn-price">Order shooting</button>
+              <button class="btn btn-price" data-translate="order">
+                Order shooting
+              </button>
             </div>
           </div>
         </section>
@@ -241,7 +354,9 @@
           <div class="contacts-box">
             <div class="box-title">
               <div class="contacts-title-left"></div>
-              <h2 class="contacts-title">Contact me</h2>
+              <h2 class="contacts-title" data-translate="contacts">
+                Contact me
+              </h2>
               <div class="contacts-title-right"></div>
             </div>
             <div class="contacts-email">
@@ -253,7 +368,9 @@
             <div class="contacts-message">
               <textarea placeholder="Message"></textarea>
             </div>
-            <button class="btn btn-message">Send message</button>
+            <button class="btn btn-message" data-translate="send-message">
+              Send message
+            </button>
           </div>
         </section>
       </div>
