@@ -29,8 +29,7 @@ btn_languages[0].onclick = getEnTranslate;
 btn_languages[1].onclick = getRuTranslate;
 
 // loading the season, languages, theme that the user selected last
-
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
   if (localStorage.getItem('theme')) {
     if (localStorage.getItem('theme') === 'white') {
       themes.classList.add('dark');
@@ -40,6 +39,10 @@ window.addEventListener('DOMContentLoaded', function () {
       link.remove();
     }
   }
+});
+window.addEventListener('DOMContentLoaded', function () {
+  let body = document.querySelector('body');
+  body.style.visibility = 'visible';
   if (localStorage.getItem('season')) {
     buttons.forEach((btn) => {
       if (btn.dataset.season === localStorage.getItem('season')) {

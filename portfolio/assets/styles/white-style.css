@@ -138,10 +138,10 @@ a,
 /* .video .video-box .btn.btn-video {
   background-image: url('../img/svg/dark-theme/Play.svg');
 } */
-.video .video-box .btn.btn-video:hover {
+/* .video .video-box .btn.btn-video:hover {
   filter: invert(75%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
-}
+} */
 
 .contacts {
   background-image: url('../img/jpg/theme/contacts.jpg');

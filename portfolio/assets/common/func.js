@@ -87,13 +87,14 @@ export function getSeason() {
   }
   return seasonInYear;
 }
-
+const imgs = [];
 function preloadImg() {
   const seasons = ['winter', 'spring', 'summer', 'autumn'];
   seasons.forEach((season) => {
     for (var i = 1; i <= 6; i++) {
       const img = new Image();
       img.src = `./assets/img/seasons-img/img/${season}/${i}.jpg`;
+      imgs.push(img);
     }
   });
 }

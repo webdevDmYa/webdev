@@ -248,6 +248,7 @@ a,
 }
 body {
   overflow-x: hidden;
+  visibility: hidden;
   background-color: #000000;
 }
 
