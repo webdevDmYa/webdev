@@ -782,10 +782,20 @@ body {
   body {
     min-width: auto;
   }
+  .setting-box .elements {
+    padding: 0px;
+  }
+  .images-box .container {
+    font-size: 16px;
+  }
+  .setting-box > h2 {
+    font-size: 24px;
+  }
   .header {
     justify-content: center;
     gap: 20px;
     padding: 10px 0px 0px 0px;
+    min-height: auto;
   }
   .play-list {
     display: none;
@@ -795,7 +805,7 @@ body {
     left: 0%;
     top: 0%;
     transform: none;
-    padding-bottom: 30px;
+    padding: 0;
   }
   .footer {
     position: static;
@@ -811,7 +821,20 @@ body {
   }
   .todo,
   .setting {
+    position: fixed;
     right: 0;
+    bottom: 5px;
+  }
+  .rs,
+  .copyright {
+    position: fixed;
+    bottom: 5px;
+  }
+  .weather-icon {
+    font-size: 22px;
+  }
+  .time {
+    font-size: 32px;
   }
   .todo {
     right: 45px;
@@ -828,9 +851,11 @@ body {
     top: 0;
     right: 0;
     width: 100%;
-    height: 93vh;
-
-    padding: 10px;
+    height: 100vh;
+    border-radius: 0;
+  }
+  .btn-confirm2 {
+    bottom: 42px;
   }
   .todo-box #tasks li > .star,
   .todo-box #tasks li > .star-black,
@@ -843,6 +868,22 @@ body {
     height: 20px;
   }
   .btn-confirm {
-    top: 0px;
+    top: 20px;
+  }
+  .player-icon,
+  .slider-icon,
+  .change-quote {
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+  }
+  .greeting-container,
+  .name {
+    min-height: 20px;
+    font-size: 16px;
+  }
+  .date {
+    min-height: 20px;
+    font-size: 15px;
   }
 }
