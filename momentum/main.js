@@ -491,7 +491,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('task').onkeyup = function () {
     let childrens = document.querySelectorAll('#tasks > li').length;
-    if (this.value.length > 0 && childrens < 9) {
+    if (this.value.length > 0 && childrens < 7) {
       document.querySelector('#submit').disabled = false;
     } else {
       document.querySelector('#submit').disabled = true;
