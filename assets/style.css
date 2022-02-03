@@ -122,17 +122,17 @@ li {
 }
 
 .telegram {
-  background-image: url('./assets/svg/telegram-brands.svg');
+  background-image: url('./svg/telegram-brands.svg');
 }
 .gmail {
-  background-image: url('./assets/svg/gmail.svg');
+  background-image: url('./svg/gmail.svg');
 }
 
 .discord {
-  background-image: url('./assets/svg/discord-brands.svg');
+  background-image: url('./svg/discord-brands.svg');
 }
 .github {
-  background-image: url('./assets/svg/github.svg');
+  background-image: url('./svg/github.svg');
 }
 .discord:hover,
 .telegram:hover,
