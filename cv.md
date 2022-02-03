@@ -24,8 +24,9 @@ I am a novice front-end developer. At this stage, I am actively moving on the ro
 
 ## Projects
 
+- [Museum/landing page](http://realfactua.com/museum/)
 - [Momentum](http://realfactua.com/momentum/)
-- [Landing Page,portfolio for photographer](http://realfactua.com/portfolio/)
+- [Landing Page,portfolio](http://realfactua.com/portfolio/)
 - [JS / custom audio-player](http://realfactua.com/js30-audio-player/)
 - [JS / custom video-player](https://realfactua.com/portfolio/#video)
 - [JS / eco-sounds](http://realfactua.com/js30-eco-sounds/)
