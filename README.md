@@ -1,2 +1,2 @@
-https://webdevDmYa.github.io/rsschool-cv/cv
-https://webdevDmYa.github.io/rsschool-cv/
+- https://webdevDmYa.github.io/rsschool-cv/cv Markdown
+- https://webdevDmYa.github.io/rsschool-cv/ HTML
