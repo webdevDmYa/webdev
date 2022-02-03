@@ -67,7 +67,7 @@ li {
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('./assets/img/profile.webp');
+  background-image: url('./img/profile.webp');
   background-position-y: -120px;
 }
 .header .container-about {
