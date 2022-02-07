@@ -78,9 +78,11 @@
       </div>
     </footer>
     <div class="setting-box">
-      <h2 style="text-align: center">Settings</h2>
+      <h2 style="text-align: center">
+        <span data-lang="settings">Settings</span>
+      </h2>
       <div class="languages-box">
-        <div class="langName">En</div>
+        <div class="langName"><span data-lang="eng">En</span></div>
         <div class="input-box">
           <div class="container">
             <label class="switch" for="checkbox">
@@ -92,19 +94,19 @@
       </div>
       <div class="images-box">
         <label class="container"
-          >GitHub
+          ><span data-lang="github">GitHub</span>
           <input type="radio" data-img="github" name="img" />
           <span class="checkmark"></span>
         </label>
 
         <label class="container"
-          >Pexel (50 per hour)
+          ><span data-lang="pexel">Pexel (50 per hour)</span>
           <input type="radio" data-img="pexel" name="img" />
           <span class="checkmark"></span>
         </label>
 
         <label class="container"
-          >Unsplash ( 50 per hour)
+          ><span data-lang="unsplash">Unsplash ( 50 per hour)</span>
           <input type="radio" data-img="unsplash" name="img" />
           <span class="checkmark"></span>
         </label>
@@ -115,33 +117,43 @@
         />
       </div>
       <div class="elements">
+        <h2>
+          <span data-lang="titleOfBoxElements">Visible/Hidden box of:</span>
+        </h2>
         <label for="weather-hid" data-vi="weather"
-          >Weather<input type="checkbox" id="weather-hid" />
+          ><span data-lang="weather">Weather</span
+          ><input type="checkbox" id="weather-hid" />
         </label>
         <label for="audio-player-hid" data-vi="audio"
-          >Audio-player<input type="checkbox" id="audio-player-hid" />
+          ><span data-lang="audio">Audio-player</span
+          ><input type="checkbox" id="audio-player-hid" />
         </label>
         <label for="time-hid" data-vi="time"
-          >Time<input type="checkbox" id="time-hid" />
+          ><span data-lang="time">Time</span
+          ><input type="checkbox" id="time-hid" />
         </label>
         <label for="greeting-hid" data-vi="greeting"
-          >Greeting<input type="checkbox" id="greeting-hid" />
+          ><span data-lang="greeting">Greeting</span
+          ><input type="checkbox" id="greeting-hid" />
         </label>
         <label for="quote-hid" data-vi="qoute"
-          >Quote<input type="checkbox" id="quote-hid" />
+          ><span data-lang="quote">Quote</span
+          ><input type="checkbox" id="quote-hid" />
         </label>
         <label for="rsschool-hid" data-vi="rsschool"
-          >Rsschool<input type="checkbox" id="rsschool-hid" />
+          ><span data-lang="rsschool">Rsschool</span
+          ><input type="checkbox" id="rsschool-hid" />
         </label>
         <label for="github-hid" data-vi="github"
-          >GitHub<input type="checkbox" id="github-hid" />
+          ><span data-lang="github">GitHub</span
+          ><input type="checkbox" id="github-hid" />
         </label>
       </div>
 
       <button class="btn-confirm" data-lang="confirm">Confirm</button>
     </div>
     <div class="todo-box">
-      <h2>TODO<span class="todo-list"></span></h2>
+      <h2><span data-lang="todo">TODO</span><span class="todo-list"></span></h2>
       <ol id="tasks"></ol>
       <form>
         <input
@@ -154,7 +166,7 @@
         <input type="submit" id="submit" />
       </form>
       <span class="current-number"></span>
-      <button class="btn-confirm2" data-lang="confirm2">Confirm</button>
+      <button class="btn-confirm2" data-lang="confirm">Confirm</button>
     </div>
     <div class="setting"><div class="svg-set"></div></div>
     <div class="todo"><div class="svg-todo"></div></div>
@@ -162,7 +174,9 @@
       <a href="https://rs.school/js-stage0/"><div class="svg-rss"></div></a>
     </div>
     <div class="copyright" data-hid="github">
-      <a href="https://github.com/webdevDmYa">GitHub</a>&nbsp;&nbsp;2022
+      <a href="https://github.com/webdevDmYa"
+        ><span data-lang="github">GitHub</span></a
+      >&nbsp;&nbsp;2022
     </div>
     <script type="module" src="main.js"></script>
     <svg width="0" height="0" class="hidden">

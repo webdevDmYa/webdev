@@ -16,7 +16,6 @@ export function playVideo() {
     progressRange.max = video.duration; //58
     progressRange.value = video.currentTime;
   });
-
   playBtn.addEventListener('click', function () {
     video.play();
     isPlay = true;

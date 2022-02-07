@@ -371,18 +371,34 @@ function fadeIn(elem, iterations) {
   var timing = { duration: 500, iterations: iterations, fill: 'forwards' };
   return elem.animate(keyframes, timing);
 }
+const boxElementsOfBlockName = document.querySelectorAll('[data-lang]');
+console.log(boxElementsOfBlockName);
+const translateSpanElements = (param) => {
+  if (param === 'ru') {
+    boxElementsOfBlockName.forEach(
+      (el) => (el.innerHTML = `${i18n.ru[el.dataset.lang]}`)
+    );
+  }
+  if (param === 'en') {
+    boxElementsOfBlockName.forEach(
+      (el) => (el.innerHTML = `${i18n.en[el.dataset.lang]}`)
+    );
+  }
+};
 const changeLanguages = () => {
   if (languages === 'ru') {
     languages = 'en';
     userName.setAttribute('placeholder', '[Enter name]');
     nameCity.setAttribute('placeholder', 'Dnipro');
-    getQuotesLangEn();
+    translateSpanElements(languages);
   } else {
     languages = 'ru';
+    translateSpanElements(languages);
     getQuotesLangRu();
     userName.setAttribute('placeholder', '[Введите имя]');
     nameCity.setAttribute('placeholder', 'Днепр');
   }
+
   greetingShow();
   greetingTranslateTo();
   getWeatherAPI();
@@ -413,30 +429,24 @@ let settingsName = document.querySelector('.setting-box > h2');
 checkLang.addEventListener('click', function () {
   if (checkLang.checked) {
     languages = 'en';
-    settingsName.innerHTML = 'Настройки';
-    langName.innerHTML = 'Ру';
     localStorage.setItem('lang', 'ru');
-    changeLanguages();
   } else {
     languages = 'ru';
-    langName.innerHTML = 'En';
-    settingsName.innerHTML = 'Settings';
     localStorage.setItem('lang', 'en');
-    changeLanguages();
   }
+  changeLanguages();
 });
 
 if (localStorage.getItem('lang')) {
   if (localStorage.getItem('lang') === 'ru') {
-    settingsName.innerHTML = 'Настройки';
-    langName.innerHTML = 'Ру';
     checkLang.checked = true;
-    changeLanguages();
-    getWeatherAPI();
   } else {
-    settingsName.innerHTML = 'Settings';
-    langName.innerHTML = 'En';
+    checkLang.checked = false;
   }
+  changeLanguages();
+  getWeatherAPI();
+  translateSpanElements(languages);
+  getQuotes();
 }
 let hidElem = document.querySelectorAll('[data-hid]');
 let viElem = document.querySelectorAll('[data-vi]');

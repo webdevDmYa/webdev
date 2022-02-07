@@ -26,7 +26,7 @@ buttonPlay.addEventListener('click', playAudio);
 buttonPrev.addEventListener('click', playMusicPrev);
 buttonNext.addEventListener('click', playMusicNext);
 const audio = new Audio();
-audio.src = '../assets/sounds/play-0.mp3';
+audio.src = './assets/sounds/play-0.mp3';
 let isPlayMusic = false;
 let positionFirstAudio = 0;
 window.addEventListener('load', function (e) {

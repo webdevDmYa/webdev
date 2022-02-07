@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>JS30-custom-video</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container-video">
+        <video id="video" src="./multic.mp4"></video>
+        <div class="container-control">
+          <div class="container-range">
+            <span class="cursor"></span>
+            <div class="range"></div>
+          </div>
+
+          <div class="container-btn">
+            <button>
+              <img
+                class="play"
+                id="img"
+                src="./assets/png/play.png"
+                alt="play/pause button img"
+              />
+            </button>
+            <div class="times">
+              <div class="current-time"></div>
+              /
+              <div class="end-time"></div>
+            </div>
+            <button>
+              <img
+                id="skip-prev"
+                src="./assets/png/fast-left.png"
+                alt="button fast-right/fast-left"
+                style="transform: rotate(180deg)"
+                data-skip="-25"
+              />
+            </button>
+
+            <button>
+              <img
+                id="skip-next"
+                data-skip="25"
+                src="./assets/png/fast-left.png"
+                alt="button fast-right/fast-left"
+              />
+            </button>
+
+            <input
+              id="speed"
+              type="range"
+              name="playbackRate"
+              min="0.5"
+              max="2"
+              step="0.1"
+              value="1"
+            />
+            <img class="speed" src="./assets/png/speed.png" />
+            <div class="speed-value"></div>
+            <div class="container-volume">
+              <div class="box-volume">
+                <input
+                  id="vol"
+                  type="range"
+                  name="volume"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value="1"
+                />
+              </div>
+              <button>
+                <img
+                  class="audio"
+                  src="./assets/png/audio.png"
+                  alt="audio img"
+                />
+              </button>
+
+              <div class="volume-value"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <a href="https://rs.school/js-stage0/">
+        <img class="rs" src="./assets/svg/rs_school_js.svg"
+      /></a>
+      <h2>2022</h2>
+      <a href="https://github.com/webdevDmYa"
+        ><img class="github" src="./assets/svg/github.svg"
+      /></a>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
