@@ -77,7 +77,7 @@ th {
   display: none;
 }
 #closeDialog {
-  width: 33%;
+  width: 40%;
   margin: 0px auto 5px;
 }
 .users.active {
@@ -203,6 +203,9 @@ th {
   }
 }
 @media (max-height: 480px) {
+  .wrapper {
+    gap: 10px;
+  }
   .container {
     grid-template-columns: repeat(3, 80px);
     grid-template-rows: repeat(3, 80px);
@@ -219,7 +222,7 @@ th {
   .changeUsers > button,
   .result,
   #closeDialog {
-    height: 40px;
+    height: 50px;
   }
   .changeUsers {
     height: 35px;
