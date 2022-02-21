@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <script defer src="./main.js"></script>
+    <title>js30-tic-tac-toe</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="changeUsers">
+        <button class="users" data-users="o">1 vs 1</button>
+
+        <button class="users" data-users="ai">1 vs AI</button>
+      </div>
+      <h1>Tic Tac Toe</h1>
+      <h4 class="title_game">1 vs 1</h4>
+      <div class="container"></div>
+
+      <button class="result" id="openDialog">Result</button>
+      <dialog class="dialog">
+        <div class="container-result">
+          <table>
+            <thead>
+              <tr>
+                <th colspan="2">Win</th>
+              </tr>
+              <tr style="color: #fc0">
+                <th colspan="1">X</th>
+                <th colspan="1" class="o" data-player="o">O</th>
+                <th colspan="1" class="ai hidden-result" data-player="ai">
+                  AI
+                </th>
+              </tr>
+
+              <tr>
+                <th colspan="1" data-win="x">0</th>
+                <th colspan="1" class="o" data-win="o">0</th>
+                <th colspan="1" class="ai hidden-result" data-win="ai">0</th>
+              </tr>
+              <tr>
+                <th colspan="2" data-nebr="nebr">Nebr: 0</th>
+              </tr>
+              <tr>
+                <th colspan="2">Steps</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+
+          <button id="closeDialog">Close</button>
+        </div>
+      </dialog>
+    </div>
+  </body>
+</html>

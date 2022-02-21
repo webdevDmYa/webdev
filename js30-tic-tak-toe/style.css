@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #226293;
+}
+h1 {
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+.changeUsers > button,
+.result,
+#closeDialog {
+  display: block;
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  background-color: #226293;
+  border-color: #fc0;
+  transition: 0.1s;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+  height: 50px;
+}
+.result:active {
+  color: #fc0;
+  border: none;
+}
+dialog {
+  border-radius: 20px;
+  color: #fff;
+  width: 200px;
+  height: auto;
+  background-color: #226293;
+  top: 49%;
+  left: 50%;
+  transform: translate(-49%, -50%);
+}
+.container-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  text-align: center;
+}
+table {
+  margin: 5px;
+}
+th {
+  padding: 5px;
+  width: 50%;
+}
+.o.hidden {
+  display: none;
+}
+.hidden {
+  display: none;
+}
+.ai.hidden-result {
+  display: none;
+}
+.hidden-result {
+  display: none;
+}
+#closeDialog {
+  width: 33%;
+  margin: 0px auto 5px;
+}
+.users.active {
+  color: #fc0;
+  border: 1px solid gray;
+  cursor: auto;
+}
+
+.users:hover {
+  color: #fc0;
+}
+.changeUsers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  gap: 50px;
+}
+.title_game {
+  color: white;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+}
+.container > div {
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.container > .box:nth-child(1) {
+  border-right: 5px solid #fc0;
+  border-bottom: 5px solid #fc0;
+}
+.container > .box:nth-child(2) {
+  border-bottom: 5px solid #fc0;
+}
+.container > .box:nth-child(3) {
+  border-left: 5px solid #fc0;
+  border-bottom: 5px solid #fc0;
+}
+.container > .box:nth-child(4) {
+  border-right: 5px solid #fc0;
+}
+.container > .box:nth-child(6) {
+  border-left: 5px solid #fc0;
+}
+.container > .box:nth-child(7) {
+  border-right: 5px solid #fc0;
+  border-top: 5px solid #fc0;
+}
+.container > .box:nth-child(8) {
+  border-top: 5px solid #fc0;
+}
+.container > .box:nth-child(9) {
+  border-left: 5px solid #fc0;
+  border-top: 5px solid #fc0;
+}
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.cross,
+.zero {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+.circle {
+  border-radius: 50%;
+}
+
+.line {
+  height: 5px;
+  border-radius: 10px;
+  background-color: #fc0;
+}
+.circle.active-zero {
+  border: 5px solid #fc0;
+  animation-name: width-height-zero;
+}
+.line.active-cross {
+  animation-name: width-cross;
+}
+.circle,
+.line:nth-child(1),
+.line:nth-child(2) {
+  position: absolute;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+.line:nth-child(1) {
+  transform: rotate(45deg);
+}
+.line:nth-child(2) {
+  transform: rotate(315deg);
+}
+@keyframes width-cross {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40px;
+  }
+}
+@keyframes width-height-zero {
+  from {
+    border: 0;
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: 25px;
+    height: 25px;
+    background-color: #226293;
+  }
+}
+@media (max-height: 480px) {
+  .container {
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+  }
+  .cross,
+  .zero {
+    width: 80px;
+    height: 80px;
+  }
+  .box {
+    width: 80px;
+    height: 80px;
+  }
+  .changeUsers > button,
+  .result,
+  #closeDialog {
+    height: 40px;
+  }
+  .changeUsers {
+    height: 35px;
+  }
+}
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 72px;
+  }
+  .title_game {
+    font-size: 28px;
+  }
+  .container {
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+  }
+  .cross,
+  .zero {
+    width: 120px;
+    height: 120px;
+  }
+  .box {
+    width: 120px;
+    height: 120px;
+  }
+  .changeUsers > button,
+  .result,
+  #closeDialog {
+    font-size: 22px;
+    height: 60px;
+  }
+  .changeUsers {
+    height: 50px;
+  }
+  th {
+    font-size: 24px;
+  }
+  td {
+    font-size: 22px;
+  }
+  dialog {
+    width: 300px;
+  }
+  @keyframes width-height-zero {
+    from {
+      border: 0;
+      width: 0;
+      height: 0;
+    }
+    to {
+      width: 40px;
+      height: 40px;
+      background-color: #226293;
+    }
+  }
+  @keyframes width-cross {
+    from {
+      width: 0;
+    }
+    to {
+      width: 60px;
+    }
+  }
+}
